@@ -11,7 +11,7 @@ export default function Hero({ setActiveTab }: { setActiveTab: (tabId: string) =
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center pt-14 md:pt-20 pb-12 md:pb-16 overflow-hidden px-4"
+      className="relative min-h-screen flex flex-col items-center justify-between pt-24 md:pt-28 pb-8 overflow-hidden px-4"
     >
       {/* Background Image with Dark Overlays */}
       <div 
@@ -33,15 +33,18 @@ export default function Hero({ setActiveTab }: { setActiveTab: (tabId: string) =
         <div className="absolute w-2 h-2 rounded-full bg-primary-purple/40 bottom-1/4 right-1/3 animate-ping" style={{ animationDuration: "5s" }}></div>
       </div>
 
+      {/* Dummy spacer to balance top padding on flex justify-between */}
+      <div className="hidden md:block h-2"></div>
+
       {/* Hero content container */}
-      <div className="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
+      <div className="relative z-10 max-w-4xl mx-auto text-center flex-1 flex flex-col items-center justify-center py-6">
         
         {/* Logo with Entrance Animation */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="mb-8 relative"
+          className="mb-6 relative"
         >
           {/* Subtle logo outer halo */}
           <div className="absolute -inset-1.5 bg-gradient-to-r from-primary-purple to-secondary-violet rounded-full blur opacity-40 animate-pulse"></div>
@@ -49,7 +52,7 @@ export default function Hero({ setActiveTab }: { setActiveTab: (tabId: string) =
             src={IMAGES.logo}
             alt={BRAND_INFO.logoDescription}
             referrerPolicy="no-referrer"
-            className="relative h-44 w-44 md:h-48 md:w-48 rounded-full object-cover border-4 border-[#202637] shadow-2xl hover:scale-105 transition-transform duration-300"
+            className="relative h-36 w-36 md:h-44 md:w-44 rounded-full object-cover border-4 border-[#202637] shadow-2xl hover:scale-105 transition-transform duration-300"
           />
         </motion.div>
 
@@ -68,7 +71,7 @@ export default function Hero({ setActiveTab }: { setActiveTab: (tabId: string) =
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-base md:text-lg text-[#BFC5D2] max-w-2xl px-4 leading-relaxed font-sans mb-10"
+          className="text-base md:text-lg text-[#BFC5D2] max-w-2xl px-4 leading-relaxed font-sans mb-8"
         >
           {HERO_SECTION.subtitle}
         </motion.p>
@@ -78,7 +81,7 @@ export default function Hero({ setActiveTab }: { setActiveTab: (tabId: string) =
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-6"
+          className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-6 mb-4"
         >
           <a
             href={OFFICIAL_LINKS.discord}
@@ -108,7 +111,7 @@ export default function Hero({ setActiveTab }: { setActiveTab: (tabId: string) =
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.7 }}
         transition={{ delay: 1, duration: 0.8 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center cursor-pointer"
+        className="relative z-10 flex flex-col items-center cursor-pointer mt-auto pt-4"
         onClick={handleGoToInfo}
         aria-label="Gulir ke bawah untuk informasi lebih lanjut"
         role="button"
