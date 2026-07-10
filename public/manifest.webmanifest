@@ -1,0 +1,16 @@
+{
+  "short_name": "MoonVeil",
+  "name": "MoonVeil Networks",
+  "description": "Server Minecraft Crossplay Survival Economy & Skyblock Modern Indonesia.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0D0E18",
+  "theme_color": "#8B5CF6",
+  "display": "standalone"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "MoonVeil Networks",
+  "description": "Landing Page premium untuk server Minecraft Indonesia bernama MoonVeil Networks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

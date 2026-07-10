@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=VT323&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", "Inter", sans-serif;
+  --font-heading: "VT323", monospace;
+  
+  --color-primary-purple: #8B5CF6;
+  --color-secondary-violet: #7C3AED;
+  --color-accent-white: #FFFFFF;
+  --color-bg-dark: #0D0E18;
+  --color-surface-dark: #171B27;
+  --color-card-dark: #202637;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #BFC5D2;
+  --color-success: #49D17D;
+  --color-warning: #FFC857;
+  --color-danger: #FF6464;
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 12px rgba(139, 92, 246, 0.4);
+  }
+  .box-glow {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.15);
+  }
+}
+
+/* Base style resets */
+body {
+  background-color: #0D0E18;
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom focus states for WCAG AA Accessibility */
+button:focus-visible, 
+a:focus-visible {
+  outline: 3px solid #8B5CF6;
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
